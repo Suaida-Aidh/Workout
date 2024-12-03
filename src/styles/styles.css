@@ -1,0 +1,293 @@
+
+:root {
+    --pr-color: #fff;
+    /* --second-color:#0a0a0a; */
+    --color-1-1: #BE2518;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+    --fz-big:60px;
+    --pd:50px
+
+}
+*{
+
+
+background-color: black;
+font-family: 'Turnkey', sans-serif;
+
+
+font-feature-settings: 'pnum' on, 'Inum' on;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 6vh;
+}
+
+
+.logo-img{
+    width:150px;
+    height: PX;
+    margin-top: 3vh;
+    padding-left: 3vh;
+    display:flexbox;
+
+}
+.button.is-navbar{
+    justify-content: center;
+    align-items: center;
+    display: left;
+    margin-left: auto;
+    margin-top: 5vh;
+    margin-right: 5vh;
+  
+}
+
+.button{
+    width: 100px;
+    pointer-events: auto;
+    color: #fff;
+    cursor: pointer;
+    background-image: radial-gradient(circle at 0 0, #25a6f9, #244cf8) ;
+    border: 1px solid #80b8fa;
+    border-bottom-style: none;
+    border-radius: 100px;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    height: 2.75rem;
+    padding: 0 .8125rem .09rem;
+    font-size: .9375rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.contact {
+    color: white;
+    background: transparent;
+    text-align: center;
+    letter-spacing: .03125rem;
+    display: flex;               
+    justify-content: center;    
+    align-items: center;         
+    height: 100%;                
+    width: 100%;  
+            
+}
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+    float: right;
+    margin-top: 4vh;
+    position: relative; 
+    right: 0; 
+
+
+}
+
+
+
+.distance {
+    padding-left: 20vh;
+    padding-right: 70px;
+}
+
+.home-header-block{
+    width: 66vh;
+    height: 200px;
+    z-index: 3;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    margin-top: 7vh;
+    
+}
+
+.home-header-block.is-work {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    align-items: flex-start;
+    padding-right: 55%;
+    padding-left: 10vh;
+    display: flex;
+    
+}
+
+
+.heading-phase{
+    color: white;
+    font-weight: 500;
+    font-size:3.5rem;
+    width:482.4px;
+    height: 72px;
+    margin-bottom: -0.4rem;
+    margin-top: -0vh;
+
+}
+
+.span-gradient{
+    color: #2c97ad;
+    font-weight: 500;
+    font-size: 3.6rem; 
+
+}
+
+.work-paragraph {
+    color: #969696;
+    font-size: 16px;
+    line-height: 1.6;
+   
+}
+
+
+
+.wrapp{
+    position:  relative;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    z-index:1 ;
+}
+
+.content{
+    width: 100%;
+    height: auto;
+    background: #639490;
+
+}
+
+.spacer {
+    width: 100%;
+    height: 50vh;
+    background: #ddd;
+    /* background: #b7fe53; */
+
+}
+
+.work {
+    display: flex;
+
+}
+
+
+.work__info {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+.work__right{
+    width: 46%;
+    height: auto;
+
+}
+
+
+
+.work__right-bl {
+    margin-left: 40px;
+    margin-top: 60vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    /* height: 80vh;
+    top: 10vh; */
+
+}
+
+.work__photo{
+    width:40vw;
+    height: 30vw;
+    /* position: relative; */
+    margin-top: 60vh;
+    padding-top: 10px;
+
+}
+
+.work__photo-item{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    
+    /* overflow: hidden; */
+}
+
+.work__photo-item img{
+    display: block;
+    width: 510.5px;
+    height: 380.55px;
+    object-fit: cover;
+    padding-top: 0vh;
+
+
+}
+
+
+.pill_list{
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+
+
+
+}
+
+.pill-item{
+    color: #fff;
+    background-color: #222;
+    background-image: linear-gradient(130deg, #01e3d2, #23aff7);
+    border: 1px #00e5d1;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    min-height: 1.75rem;
+    padding: 1px;
+    font-size: .875rem;
+    line-height: 157.143%;
+    display: flex
+;
+    overflow: hidden;
+
+}
+
+
+.pill-item-inner{
+    color: #fff;
+    background-color: #000;
+    border: 1px #00e5d1;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 1.75rem;
+    padding-left: .875rem;
+    padding-right: .875rem;
+    font-size: .875rem;
+    line-height: 157.143%;
+    display: flex;
+
+;
+}
+
+
+
