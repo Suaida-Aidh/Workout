@@ -1,7 +1,7 @@
 
 :root {
     --pr-color: #fff;
-    /* --second-color:#0a0a0a; */
+    --second-color:#0a0a0a;
     --color-1-1: #BE2518;
     --cubicbz: cubic-bezier(.9, 0, .1, 1);
     --fz-big:60px;
@@ -97,15 +97,14 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     padding-left: 20vh;
     padding-right: 70px;
 }
-
 .home-header-block{
     width: 66vh;
     height: 200px;
-    z-index: 3;
+    z-index: 10; /* Ensure it's on top */
     flex-direction: column;
     margin-bottom: 0.3rem;
     margin-top: 7vh;
-    
+    position: relative; /* Allows stacking */
 }
 
 .home-header-block.is-work {
@@ -115,35 +114,32 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     padding-right: 55%;
     padding-left: 10vh;
     display: flex;
-    
+    position: relative; /* Ensures this container stays on top */
 }
-
 
 .heading-phase{
     color: white;
     font-weight: 500;
-    font-size:3.5rem;
-    width:482.4px;
+    font-size: 3.5rem;
+    width: 482.4px;
     height: 72px;
     margin-bottom: -0.4rem;
     margin-top: -0vh;
-
+    z-index: 15; /* To make sure the heading stays on top */
 }
 
 .span-gradient{
     color: #2c97ad;
     font-weight: 500;
-    font-size: 3.6rem; 
-
+    font-size: 3.6rem;
+    z-index: 15; /* Ensures this span stays on top */
 }
 
 .work-paragraph {
     color: #969696;
     font-size: 16px;
     line-height: 1.6;
-   
 }
-
 
 
 .wrapp{
@@ -157,30 +153,104 @@ font-feature-settings: 'pnum' on, 'Inum' on;
 .content{
     width: 100%;
     height: auto;
-    background: #639490;
-
 }
 
 .spacer {
     width: 100%;
     height: 50vh;
     background: #ddd;
-    /* background: #b7fe53; */
-
 }
 
 .work {
     display: flex;
+    
+}
+/* .work__left, .work__photo {
+    position: relative; 
 
+} */
+
+
+.animation-container {
+    margin:  auto;
+    margin-top: -60vh;
+    
+    
+  }
+
+.work__left{
+    position: relative;
+    padding-top: 25vh;
+    width: 54%;
+    z-index:2;
+    margin-right: 10ch;
+    
+    
+    
 }
 
+.work__text {
+    margin: auto;
+    width: 50%;
+    font-weight: 1rem;
+}
 
 .work__info {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
 
+.work__num{
+    display: block;
+    line-height: 9;
+    text-align: right;
+    font-size: 18px;
+    transform: skewX(-20deg);
+    color: var(--color-1-1);
+
+}
+
+.title {
+    font-size: 3rem;
+    width: 10px;
+font-weight: 500;
+line-height: 1.2;
+    text-align: right;
+    color: var(--pr-color);
+    /* background-color: #01e3d2; */
+margin-right:44vh;
+white-space: nowrap;
+}
+
+.title .stroke{
+    display: block;
+    color: transparent;
+background-color: #BE2518;    
+-webkit-text-stroke: 1px var(--pr-color);
+}
+
+.work__link {
+    display: block;
+    width: 365px;
+    margin-top: 50px;
+    margin-left: auto;
+    padding: 18px 0;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--pr-color);
+    letter-spacing: 4px;
+    border: 2px solid var(--color-1-1);
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.work__link:hover{
+    background: var(--color-1-1);
+    color: var(--color-1-2);
+    letter-spacing: 6px;
 }
 
 
@@ -188,7 +258,6 @@ font-feature-settings: 'pnum' on, 'Inum' on;
 .work__right{
     width: 46%;
     height: auto;
-
 }
 
 
@@ -206,16 +275,14 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     top: 0;
     /* height: 80vh;
     top: 10vh; */
-
 }
 
 .work__photo{
     width:40vw;
     height: 30vw;
     /* position: relative; */
-    margin-top: 60vh;
-    padding-top: 10px;
-
+    margin-top: auto;
+    padding-top: auto;
 }
 
 .work__photo-item{
@@ -224,7 +291,7 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     width: 100%;
     height: 100%;
     cursor: pointer;
-
+    margin-top: auto;
     
     /* overflow: hidden; */
 }
@@ -234,10 +301,11 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     width: 510.5px;
     height: 380.55px;
     object-fit: cover;
-    padding-top: 0vh;
-
+    padding-top: -9vh;
+    margin-top: auto;
 
 }
+
 
 
 .pill_list{
@@ -246,15 +314,13 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    display: flex;
-
+    display: flex
 
 
 }
 
 .pill-item{
     color: #fff;
-    background-color: #222;
     background-image: linear-gradient(130deg, #01e3d2, #23aff7);
     border: 1px #00e5d1;
     border-radius: 100px;
@@ -267,13 +333,11 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     display: flex
 ;
     overflow: hidden;
-
 }
 
 
 .pill-item-inner{
     color: #fff;
-    background-color: #000;
     border: 1px #00e5d1;
     border-radius: 100px;
     justify-content: center;
@@ -284,10 +348,15 @@ font-feature-settings: 'pnum' on, 'Inum' on;
     padding-right: .875rem;
     font-size: .875rem;
     line-height: 157.143%;
-    display: flex;
-
+    display: flex
 ;
 }
 
-
-
+.work__left .work__text .work__info .work__left-bl p {
+    color: #696969; 
+    font-size: 16px;
+    line-height: 1.6; 
+    /* background-color: #BE2518; */
+    width: 70vh;
+    margin-left: -7vh;
+}
